@@ -1,10 +1,8 @@
-public class Animal {
-
+class Animal {
     String family;
     String name;
     int age;
     boolean isMammal;
-
 
     public Animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
@@ -13,15 +11,17 @@ public class Animal {
         this.isMammal = isMammal;
     }
 
-    public void displayAnimalInfo() {
-        String mammalInfo = isMammal ? "est un mammifère." : "n'est pas un mammifère.";
-        System.out.println("Animal: " + name + ", Famille: " + family + ", Âge: " + age + " ans, " + mammalInfo);
-    }
-
     @Override
     public String toString() {
-        String mammalInfo = isMammal ? "mammifère" : "non mammifère";
-        return "Animal [Nom=" + name + ", Famille=" + family + ", Âge=" + age + " ans, " + mammalInfo + "]";
+        return "Animal{" +
+                "family='" + family + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", isMammal=" + (isMammal ? "Oui" : "Non") +
+                '}';
     }
 
+    public String getName() {
+        return null;
+    }
 }
